@@ -11,13 +11,7 @@ network-idle-monitor/
 ├── server.py             # Flask dashboard server — runs on Linux server
 ├── run_me.bat            # Runs agent.py with correct Python/venv path
 ├── schedule_task.bat     # Registers scheduled task (run once per PC as Admin)
-├── setup.bat             # Full one-time setup script for client PCs
-├── setup_venv.bat        # Setup using bundled venv.zip
-├── create_venv_bundle.bat # Creates venv.zip on internet-connected machine
 ├── download_packages.bat  # Downloads pip packages for offline install
-├── diagnose.bat          # Diagnoses Python/pip issues on client PC
-├── stop_task.ps1         # Stops task on all PCs in OU via PowerShell
-├── enable_task.ps1       # Re-enables task on all PCs in OU
 ├── .gitignore
 └── README.md
 ```
