@@ -143,3 +143,34 @@ Get-ADComputer -Filter * -SearchBase "OU=Computers,DC=yourdomain,DC=com" | ForEa
 - `inventory.ini` is excluded from Git (contains passwords) — create locally
 - `.venv/` and `venv.zip` are excluded — create using `create_venv_bundle.bat`
 - `*.db`, `*.log`, `state.json` are excluded — runtime data, machine-specific
+
+## Requirements
+
+See `requirements.txt` for all dependencies.
+
+### Server (Linux)
+```bash
+pip3 install -r requirements.txt --break-system-packages
+```
+
+### Client (Windows) — with internet
+```bat
+python -m pip install -r requirements.txt
+```
+
+### Client (Windows) — offline
+```bat
+python -m pip install -r requirements.txt --no-index --find-links=packages
+```
+
+### Requirements breakdown
+
+| Package | Version | Used by |
+|---|---|---|
+| flask | 3.0.0 | Server — web framework |
+| psycopg2-binary | 2.9.9 | Server — PostgreSQL connector |
+| requests | 2.31.0 | Client agent — HTTP POST to server |
+| certifi | 2024.2.2 | requests dependency |
+| charset-normalizer | 3.3.2 | requests dependency |
+| idna | 3.6 | requests dependency |
+| urllib3 | 2.2.1 | requests dependency |
