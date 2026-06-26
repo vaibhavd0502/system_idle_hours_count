@@ -1,0 +1,16 @@
+# ============================================================
+#  Network Idle Monitor - Python Dependencies
+# ============================================================
+
+# ── Server (Linux) ───────────────────────────────────────────
+flask==3.0.0
+psycopg2-binary==2.9.9
+
+# ── Client (Windows agent) ───────────────────────────────────
+requests==2.31.0
+
+# ── requests dependencies (included automatically) ───────────
+certifi==2024.2.2
+charset-normalizer==3.3.2
+idna==3.6
+urllib3==2.2.1
